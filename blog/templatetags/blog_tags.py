@@ -25,6 +25,7 @@ def get_most_commented_posts(count=5):
         "-total_comments"
     )[:count]
 
-@register.filter(name='markdown')
+
+@register.filter(name="markdown")
 def markdown_format(text):
     return mark_safe(markdown.markdown(text))
