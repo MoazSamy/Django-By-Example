@@ -6,6 +6,7 @@ urlpatterns = [
     path("", views.dashboard, name="dashboard"),
     path("", include("django.contrib.auth.urls")),
     path("register/", views.register, name="register"),
+    path("edit/", views.edit, name="edit"),
     # This is the function defined view
     # path("login/", views.user_login, name="login"),
     # These are the CBV from django for login urls
