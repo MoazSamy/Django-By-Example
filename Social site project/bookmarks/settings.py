@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-qug$8qzm3!at=+vcyv2@zslpzy!%pkl+3(wwb33&0ec-@+fqls
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "social_django",
+    "django_extensions",
 ]
 
 MIDDLEWARE = [
@@ -106,7 +108,28 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS=[
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    # 'social_core.backends.twitter.TwitterOAuth',
+    # 'social_core.backends.google.GoogleOAuth2',
 ]
+
+SOCIAL_AUTH_FACEBOOK_KEY = '679262177231410'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'a7b169424a1ff034fdb416884731f9ab'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_PIPELINE = [
+ 'social_core.pipeline.social_auth.social_details',
+ 'social_core.pipeline.social_auth.social_uid',
+ 'social_core.pipeline.social_auth.auth_allowed',
+ 'social_core.pipeline.social_auth.social_user',
+ 'social_core.pipeline.user.get_username',
+ 'social_core.pipeline.user.create_user',
+ 'account.authentication.create_profile',
+ 'social_core.pipeline.social_auth.associate_user',
+ 'social_core.pipeline.social_auth.load_extra_data',
+ 'social_core.pipeline.user.user_details',
+]
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
