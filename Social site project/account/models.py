@@ -32,6 +32,6 @@ user_model = get_user_model()
 user_model.add_to_class(
     "following",
     models.ManyToManyField(
-        "self", through=Contact, related_name="Followers", symmetrical=False
+        "self", through=Contact, related_name="followers", symmetrical=False
     ),
 )
