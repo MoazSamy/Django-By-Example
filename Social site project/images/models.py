@@ -18,10 +18,14 @@ class Image(models.Model):
     url = models.URLField(max_length=2000)
     image = models.ImageField(upload_to="images/%Y/%m/%d")
     description = models.TextField(blank=True)
+    total_likes = models.PositiveIntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        indexes = [models.Index(fields=["-created"])]
+        indexes = [
+            models.Index(fields=["-created"]),
+            models.Index(fields=["-total_likes"]),
+        ]
         ordering = ["-created"]
 
     def __str__(self):
