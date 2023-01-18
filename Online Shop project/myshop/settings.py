@@ -134,3 +134,9 @@ CART_SESSION_ID = "cart"
 # Email settings
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+
+# Stripe Settings
+STRIPE_PUBLISHABLE_KEY = ''
+STRIPE_SECRET_KEY = ''
+STRIPE_API_VERSION = ''
