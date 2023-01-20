@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rosetta",
+    "parler",
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
     "orders.apps.OrdersConfig",
@@ -115,12 +116,12 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = "en"
 
 LANGUAGES = [
-    ('en', _('English')),
-    ('ar', _('Arabic')),
+    ("en", _("English")),
+    ("ar", _("Arabic")),
 ]
 
 LOCALE_PATHS = [
-    BASE_DIR / 'locale',
+    BASE_DIR / "locale",
 ]
 
 TIME_ZONE = "UTC"
@@ -161,3 +162,15 @@ STRIPE_WEBHOOK_SECRET = ''
 REDIS_HOST = "localhost"
 REDIS_PORT = 6379
 REDIS_DB = 1
+
+# django-parler settings
+PARLER_LANGUAGES = {
+    None: (
+        {"code": "en"},
+        {"code": "ar"},
+    ),
+    "default": {
+        "fallback": "en",
+        "hide_untranslated": False,
+    },
+}
