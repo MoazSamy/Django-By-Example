@@ -17,6 +17,11 @@ urlpatterns = [
     ),
     # Module/Content urls
     path(
+        "module/<int:module_id>",
+        views.ModuleContentListView.as_view(),
+        name="module_content_list",
+    ),
+    path(
         "module/<int:module_id>/content/<model_name>/create/",
         views.ContentCreateUpdateView.as_view(),
         name="module_content_create",
@@ -26,5 +31,9 @@ urlpatterns = [
         views.ContentCreateUpdateView.as_view(),
         name="module_content_update",
     ),
-    path("content/<int:id>/delete/", views.ContentDeleteView, name="module_content_delete"),
+    path(
+        "content/<int:id>/delete/",
+        views.ContentDeleteView,
+        name="module_content_delete",
+    ),
 ]
