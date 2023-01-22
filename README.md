@@ -67,9 +67,14 @@ The book covers a wide range of web app development topics divided into four dif
   - Translate models using [django-parler](https://github.com/django-parler/django-parler)
   - Localize forms using [django-localflavor](https://github.com/django/django-localflavor)
 
-- **eLearning Platform** (chapter 12): Create an eLearning platform including a CMS
+- **eLearning Platform** (chapters 12-13): Create an eLearning platform including a CMS
   - Build course models
   - Create and use data fixtures
   - Use model inheritance to create polymorphic Content
   - Create a custom model field to order course contents
   - Implement authentication views
+  - Build a content management system using class-based views and mixins
+  - Restrict access using groups and permissions
+  - Build formsets to manage course contents
+  - Create drag-and-drop functionality to reorder content in-place using JavaScript and Django
+  - Using generic mixins from [django-braces](https://github.com/brack3t/django-braces)
