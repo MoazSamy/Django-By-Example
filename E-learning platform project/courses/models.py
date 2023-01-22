@@ -38,7 +38,7 @@ class Course(models.Model):
 class Module(models.Model):
     course = models.ForeignKey(Course, related_name="modules", on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=50, unique=True)
+    description = models.TextField(default='')
     order = OrderField(blank=True, for_fields=["course"])
 
     class Meta:
