@@ -33,7 +33,7 @@ urlpatterns = [
     ),
     path(
         "content/<int:id>/delete/",
-        views.ContentDeleteView,
+        views.ContentDeleteView.as_view(),
         name="module_content_delete",
     ),
 ]
