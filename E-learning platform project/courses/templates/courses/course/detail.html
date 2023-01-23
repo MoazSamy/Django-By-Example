@@ -20,8 +20,8 @@
             </p>
             {{object.overview|linebreaks}}
             {% if request.user.is_authenticated %}
-                <form action="{% url 'students:student_enroll_course' %}"method="POST">
-                    {{enroll_form}}
+                <form action="{% url 'students:student_enroll_course' %}" method="POST">
+                    {{ enroll_form }}
                     {% csrf_token %}
                     <input type="submit" value="Enroll now">
                 </form>
