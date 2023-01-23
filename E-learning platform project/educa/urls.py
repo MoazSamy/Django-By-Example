@@ -25,6 +25,7 @@ urlpatterns = [
     path("accounts/logout", auth_views.LogoutView.as_view(), name="logout"),
     path("admin/", admin.site.urls),
     path("courses/", include("courses.urls", namespace="courses")),
+    path("students/", include("students.urls", namespace="students")),
     path("", CourseListView.as_view(), name="course_list"),
 ]
 
