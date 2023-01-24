@@ -78,3 +78,8 @@ The book covers a wide range of web app development topics divided into four dif
   - Build formsets to manage course contents
   - Create drag-and-drop functionality to reorder content in-place using JavaScript and Django
   - Using generic mixins from [django-braces](https://github.com/brack3t/django-braces)
+  - Implement public views and student enrolment views
+  - Render different type of contents and use [django-embed-video](https://github.com/jazzband/django-embed-video)
+  - Cache content using the cache framework
+  - Use the [Memached](https://memcached.org/) and Redis cache backends
+  - Monitor Redis using [django-redisboard](https://github.com/ionelmc/django-redisboard)
