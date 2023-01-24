@@ -67,7 +67,7 @@ The book covers a wide range of web app development topics divided into four dif
   - Translate models using [django-parler](https://github.com/django-parler/django-parler)
   - Localize forms using [django-localflavor](https://github.com/django/django-localflavor)
 
-- **eLearning Platform** (chapters 12-13): Create an eLearning platform including a CMS
+- **eLearning Platform** (chapters 12-15): Create an eLearning platform including a CMS
   - Build course models
   - Create and use data fixtures
   - Use model inheritance to create polymorphic Content
@@ -83,3 +83,8 @@ The book covers a wide range of web app development topics divided into four dif
   - Cache content using the cache framework
   - Use the [Memached](https://memcached.org/) and Redis cache backends
   - Monitor Redis using [django-redisboard](https://github.com/ionelmc/django-redisboard)
+  - Build an API using [Django REST Framework](https://www.django-rest-framework.org/)
+  - Create serializers for models and custom API views
+  - Handle API authentication and permissions
+  - Build API viewsets and routers
+  - Consume your API using Python [requests](https://github.com/psf/requests)
