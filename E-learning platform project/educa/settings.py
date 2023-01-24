@@ -33,6 +33,7 @@ LOGIN_REDIRECT_URL = reverse_lazy("students:student_course_list")
 # Application definition
 
 INSTALLED_APPS = [
+    "rest_framework",
     "redisboard",
     "debug_toolbar",
     "embed_video",
@@ -50,9 +51,9 @@ MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-#   "django.middleware.cache.UpdateCacheMiddleware",
+    #   "django.middleware.cache.UpdateCacheMiddleware",
     "django.middleware.common.CommonMiddleware",
-#   "django.middleware.cache.FetchFromCacheMiddleware",
+    #   "django.middleware.cache.FetchFromCacheMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -138,17 +139,24 @@ MEDIA_ROOT = BASE_DIR / "media"
 
 # Cache settings
 CACHES = {
-    'default':{
-        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379',
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
     }
 }
 
-CACHE_MIDDLEWARE_ALIAS = 'default'
-CACHE_MIDDLEWARE_SECONDS = 60*15
-CACHE_MIDDLEWARE_KEY_PREFIX = 'educa'
+CACHE_MIDDLEWARE_ALIAS = "default"
+CACHE_MIDDLEWARE_SECONDS = 60 * 15
+CACHE_MIDDLEWARE_KEY_PREFIX = "educa"
 
 # Debug toolbar
 INTERNAL_IPS = [
-    '127.0.0.1',
+    "127.0.0.1",
 ]
+
+# DRF settings
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
+    ]
+}
