@@ -33,7 +33,7 @@ LOGIN_REDIRECT_URL = reverse_lazy("students:student_course_list")
 # Application definition
 
 INSTALLED_APPS = [
-    "channels",
+    "daphne",
     "chat",
     "rest_framework",
     "redisboard",
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "channels",
 ]
 
 MIDDLEWARE = [
@@ -162,3 +163,6 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly"
     ]
 }
+
+# ASGI settings
+ASGI_APPLICATION = "educa.asgi.application"
