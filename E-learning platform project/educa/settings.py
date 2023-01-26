@@ -33,6 +33,7 @@ LOGIN_REDIRECT_URL = reverse_lazy("students:student_course_list")
 # Application definition
 
 INSTALLED_APPS = [
+    "chat",
     "rest_framework",
     "redisboard",
     "debug_toolbar",
