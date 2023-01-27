@@ -67,7 +67,7 @@ The book covers a wide range of web app development topics divided into four dif
   - Translate models using [django-parler](https://github.com/django-parler/django-parler)
   - Localize forms using [django-localflavor](https://github.com/django/django-localflavor)
 
-- **eLearning Platform** (chapters 12-16): Create an eLearning platform including a CMS
+- **eLearning Platform** (chapters 12-17): Create an eLearning platform including a CMS
   - Build course models
   - Create and use data fixtures
   - Use model inheritance to create polymorphic Content
@@ -92,3 +92,9 @@ The book covers a wide range of web app development topics divided into four dif
   - Implement a WebSocket consumer/client using Django and JavaScript
   - Use Redis to set up a channel layer
   - Make your WebSocket fully-asynchronous
+  - Create settings for multiple environments
+  - Configure a production environment using [Docker Compose](https://docs.docker.com/compose/) with PostgreSQL, Redis, [Nginx](https://www.nginx.com/), [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) and [Daphne](https://github.com/django/daphne)
+  - Serve your project securely through HTTPS
+  - Use the Django system check framework
+  - Build a custom middleware
+  - Create custom management commands
